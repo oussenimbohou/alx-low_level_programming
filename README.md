@@ -1,0 +1,1 @@
+This is a new journey where I will have to write a c program using gcc compiler. I will have to demonstrate different steps of the compilation process such as:preprocessor,compiler,assembler and the linking.
