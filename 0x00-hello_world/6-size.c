@@ -1,8 +1,11 @@
 #include<stdio.h>
-/*
- * main: Starting point
- * Return 0 if the program end with any error and non zero otherwise.
- * */
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	printf("Size of a char: %u byte(s)\n", sizeof(char));

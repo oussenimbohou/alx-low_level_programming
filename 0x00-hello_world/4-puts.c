@@ -1,8 +1,10 @@
 #include<stdio.h>
+
 /*
- * The function starts from main.
- * The return value is 0 if the program end successfully
+ * main: Entry point.
+ * Retun: Always 0 if successful
 */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
