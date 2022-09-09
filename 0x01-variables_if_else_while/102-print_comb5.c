@@ -18,18 +18,21 @@ int main(void)
 		{
 			for (t = tens; t <= '9'; t++)
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				for (o = ones; o <= '9'; o++)
 				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(t);
-					putchar(o);
-					if (!((tens == '9' && ones == '8') &&
-							(t == '9' && 0 == '9')))
+					if (!(tens == ones && ones == t && t == o))
 					{
-						putchar(',');
+						putchar(tens);
+						putchar(ones);
 						putchar(' ');
+						putchar(t);
+						putchar(o);
+						if (!((tens == '9' && ones == '8') &&
+							(t == '9' && o == '9')))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 				o = '0';
