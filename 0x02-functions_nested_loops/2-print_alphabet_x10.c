@@ -3,7 +3,7 @@
 /**
   *print_alphabet_x10 - pinting the whole alphabet 10 times.
   *
-  *Return: 0
+  *Return: No return value.
   */
 void print_alphabet_x10(void)
 {
@@ -18,5 +18,4 @@ void print_alphabet_x10(void)
 		}
 		_putchar('\n');
 	}
-	return (0);
 }
