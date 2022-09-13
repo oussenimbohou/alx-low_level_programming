@@ -1,3 +1,4 @@
+#include "main.h"
 /**
   *print_alphabet_x10 - pinting the whole alphabet 10 times.
   *

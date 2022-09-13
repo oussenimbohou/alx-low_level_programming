@@ -5,7 +5,7 @@
   *
   *Return: 1 (success) and -1 (fail).
   */
-int _putchar(character ch)
+int _putchar(char ch)
 {
 	return (write(1,&ch,1));
 }
