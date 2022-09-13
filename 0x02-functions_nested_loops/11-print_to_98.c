@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * print_to_98 - Prints all natural numbers
@@ -14,16 +14,17 @@ void print_to_98(int n)
 	{
 		for (; n > 98; n--)
 		{
-			printf("%d, ", n);
+			_putchar(n + '0');
 		}
 	}
 	else if (n < 98)
 	{
 		for (; n < 98; n++)
 		{
-			printf("%d, ", n);
+			_putchar(n + '0');
 		}
 	}
-	printf("%d\n", n);
+	_putchar(n + '0');
+	_putchar('\n');
 }
 
