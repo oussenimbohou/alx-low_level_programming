@@ -24,12 +24,12 @@ void print_alphabet(void);
 void print_alphabet_x10(void);
 
 /**
-  *islower - printing the whole alphabet 10 times.
+  *_islower - printing the whole alphabet 10 times.
   *@c: The argument to be passed.
   *
   *Return: 1 if the character is lower and 0 otherwise.
   */
-int islower(int c);
+int _islower(int c);
 
 /**
   *_isalpha - a function to check if the giving character is an alphabet or not.
@@ -46,6 +46,18 @@ int _isalpha(int c);
   *Return: 1 ifthe argument is positve,0 if it's zero and -1 if it's negative.
   */
 int print_sign(int n);
+
+int _abs(int);
+
+int print_last_digit(int);
+
+void jack_bauer(void);
+
+void times_table(void);
+
+int add(int, int);
+
+void print_to_98(int n);
 
 #endif
 
