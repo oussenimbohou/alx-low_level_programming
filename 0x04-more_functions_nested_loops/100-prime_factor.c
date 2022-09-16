@@ -2,22 +2,23 @@
 #include <math.h>
 
 /**
-*prime_factor - a function to print the highest prime factor of a given number
-*@n: Integer parameter
+*main - Starting polong of the program
 *
-*Return: the highest prime factor
+*Return: Always 0 (success)
 */
-void prime_factor(void)
-{
-	int i, n, max;
 
-	n = 15;
-	while (n % 2 == 0)
+int main(void)
+{
+	unsigned long divisor = 2, n, max;
+	unsigned long i;
+
+	n = 612852475143;
+	while (n % divisor == 0)
 	{
-		max = 2;
-		n /= 2;
+		max = divisor;
+		n /= divisor;
 	}
-	for (i = 3; i <= sqrt(n); i += 2)
+	for (i = 3; i <= sqrt(n); i += divisor)
 	{
 		while (n % i == 0)
 		{
@@ -25,9 +26,10 @@ void prime_factor(void)
 			n /= i;
 		}
 	}
-	if (n > 2)
+	if (n > divisor)
 	{
 		max = n;
 	}
-	printf("%d\n",max);
+	printf("%lu\n", max);
+	return (0);
 }
