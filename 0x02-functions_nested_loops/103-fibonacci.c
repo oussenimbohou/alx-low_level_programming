@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	unsigned long long f1 = 1, f2 = 2, f = f1 + f2, sum = f2;
+	long f1 = 1, f2 = 2, f = f1 + f2, sum = f2;
 
 	for (i = 1; f <= 4000000; i++)
 	{
@@ -22,5 +22,5 @@ int main(void)
 			sum += f;
 		}
 	}
-	printf("%llu\n", sum);
+	printf("%ld\n", sum);
 }
