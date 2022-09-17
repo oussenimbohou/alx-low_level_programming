@@ -8,16 +8,16 @@
   */
 int main(void)
 {
-	unsigned long i, f1 = 1, f2 = 2, f;
+	long int i, f1 = 1, f2 = 2, f;
 
-	printf("%lu, %lu, ", f1, f2);
+	printf("%ld, %ld, ", f1, f2);
 	for (i = 3; i < MAX; i++)
 	{
 		f = f1 + f2;
-		printf("%lu, ", f);
+		printf("%ld, ", f);
 		f1 = f2;
 		f2 = f;
 	}
-	printf("%lu\n", f);
+	printf("%ld\n", f1 + f2);
 	return (0);
 }

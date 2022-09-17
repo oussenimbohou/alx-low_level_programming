@@ -19,7 +19,6 @@ int main(void)
 		f = f1 + f2;
 		if (f % 2 == 0)
 		{
-			printf("fibo: %lu\n", f);
 			sum += f;
 		}
 	}
