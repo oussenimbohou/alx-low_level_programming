@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-  *_atoi: Function to convert a string to an integer.
+  *_atoi - Function to convert a string to an integer.
   *@s:Argument string.
-
-  *Return an integer value of the corresponding string.
+  *Return: It will return an integer value of the corresponding string.
   */
 int _atoi(char *s)
 {
@@ -24,5 +23,5 @@ int _atoi(char *s)
 		if (flag == 1)
 			break;
 	}
-	return sign * res;
+	return (sign * res);
 }
