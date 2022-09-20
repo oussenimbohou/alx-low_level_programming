@@ -8,16 +8,21 @@
   */
 int _atoi(char *s)
 {
-	int minus = 0;
-	while (*s != '\0')
-		if (*s == '-')
+	int res = 0;
+	int sign = 1;
+	int i, flag = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == '-')
+			sign *= -1;
+		while (s[i] >= '0' && s[i] <= '9')
 		{
-			minus++;
+			res = res * 10 + s[i++] - '0';
+			flag = 1;
 		}
-		while (*s >= '1' || *s <= '9')
-		{
-			_putchar(*s);
-			s++;
-		}
-		s++;
+		if (flag == 1)
+			break;
+	}
+	return sign * res;
 }
