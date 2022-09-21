@@ -31,15 +31,15 @@ int _strlen(char *str)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int len  = _strlen(src);
+	int len  = _strlen(dest);
 	int i = 0;
 
 	while (*src != '\0' && i < n)
 	{
-		*(dest + len - 1 + i) = *src;
+		*(dest + len + i) = *src;
 		src++;
 		i++;
 	}
-	*(dest + _strlen(dest) + 1) = '\0';
+	*(dest + _strlen(dest)) = '\0';
 	return (dest);
 }
