@@ -1,23 +1,5 @@
 #include "main.h"
 
-/**
-  *_strlen - To compute the length of the string.
-  *@str: A pointer character argument
-  *
-  *Return: The length of the string.
-  */
-
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (*str != '\0')
-	{
-		len++;
-		str++;
-	}
-	return (len);
-}
 
 /**
   *_strncat - Customized stract function to concatenate strings.
@@ -31,8 +13,9 @@ int _strlen(char *str)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int len  = _strlen(src);
-	int i = 0;
+	int len = 0, i = 0;
+	while (*(src + len) != '\0')
+		len++;
 
 	while (*src != '\0' && i < n)
 	{
@@ -40,6 +23,6 @@ char *_strncat(char *dest, char *src, int n)
 		src++;
 		i++;
 	}
-	*(dest + _strlen(dest)) = '\0';
+	*(dest + len + n) = '\0';
 	return (dest);
 }
