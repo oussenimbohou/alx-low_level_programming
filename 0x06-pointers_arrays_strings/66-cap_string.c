@@ -13,7 +13,10 @@ int isSeparator(char c)
 			c == '!' || c == '?' || c == '"' ||
 			c == '(' || c == ')' || c == '{'
 			|| c == '}')
+	{
+		printf("char is: %c\n", c);
 		return (1);
+	}
 	return (0);
 }
 
