@@ -1,38 +1,31 @@
 #include "main.h"
-
 /**
-  *isSeparator - function to check if the character is a separator.
-  *@c: character argument.
-  *
-  *Return: return 1 if it's a separator and 0 if not.
-  */
-int isSeparator(char c)
+ * cap_string - capitalizes all words of a string
+ * @s: input string.
+ * Return: the pointer to dest.
+ */
+
+char *cap_string(char *s)
 {
-	if (c == ' ' || c == '\t' || c == '\n' ||
-			c == ',' || c == ';' || c == '.' ||
-			c == '!' || c == '?' || c == '"' ||
-			c == '(' || c == ')' || c == '{'
-			|| c == '}')
-		return (1);
-	return (0);
-}
+	int count = 0, i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-
-/**
-  *cap_string - capitalize all words
-  *@str: char pointer which is a string.
-  *
-  *Return: char array.
-  */
-char *cap_string(char *str)
-{
-	int  i = 0;
-
-	while (*(str + i) != '\0')
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		if (isSeparator(*(str + i)) == 1)
-			*(str + i + 1) = *(str + i + 1) - 32;
-		i++;
+		for (i = 0; i < 13; i++)
+		{
+			if (*(s + count) == sep_words[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
+			}
+		}
+		count++;
 	}
-	return (str);
+	return (s);
 }
+
