@@ -28,5 +28,5 @@ int find_perfect_root(int num, int perfect_root)
 	if (perfect_root * perfect_root == num)
 		return (perfect_root);
 	else
-		return find_perfect_root(num, perfect_root + 1);
+		return (find_perfect_root(num, perfect_root + 1));
 }
