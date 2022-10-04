@@ -1,27 +1,29 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
-
 /**
-  *_strdup - function that returns a pointer to a newly allocated space
-  *in memory, which contains a copy of the string given as a
-  *parameter.
-  *@str: char pointer
-  *
-  *Return: pointer to the duplicate string if succes
-  *or NULL if str = NULL.
-  */
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
+ *
+ * Return: pointer of an array of chars
+ */
 char *_strdup(char *str)
 {
-	char *p = (char *)malloc(sizeof(char) * strlen(str));
+	char *strout;
+	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
-	if (p == NULL)
-	{
-		free(p);
-		return ('\0');
-	}
-	strcpy(p, str);
-	return (p);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
+		return (NULL);
+
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }
