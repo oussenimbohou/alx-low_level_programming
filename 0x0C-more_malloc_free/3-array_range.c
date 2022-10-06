@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-  *array_arrange - A function that creates an array of integer.
+  *array_range - A function that creates an array of integer.
   *@min: integer argument
   *@max: integer argument
   *
@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	p = malloc(sizeof(*p) * (max - min + 1));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < (max - min + 1); i++)
+	for (i = 0; min <= max; i++)
 		p[i] = min++;
 	p[i] = '\0';
 
