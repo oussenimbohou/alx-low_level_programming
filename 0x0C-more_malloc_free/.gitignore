@@ -1,0 +1,4 @@
+*.o
+_putchar.c
+AUTO_GIT
+*main.c
