@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
   *infinite_add - function to add 2 valid integers
   *@n1: Input character
@@ -10,8 +11,9 @@
   */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0, len2 = 0, counter = 0, max, rem = 0, ans;
+	int len1 = 0, len2 = 0, counter = 0, max, rem = 0, ans, i;
 	const int SIZE = size_r;
+	char result[100];
 
 	while (*(n1 + len1)  != '\0')
 		len1++;
@@ -66,5 +68,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		len1--, len2--, size_r--, counter++;
 	}
-	return (r);
+	for (i = 0; i < max + 1; i++)
+	{
+		result[i] = r[i];
+		putchar(r[i]);
+	}
+	return (result);
 }
