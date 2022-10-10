@@ -2,8 +2,6 @@
 
 /**
   *main - Print the name of the file.
-  *@argc: integer argument
-  *@argv:char double pointer
   *
   *Return: Always 0 success.
   */
