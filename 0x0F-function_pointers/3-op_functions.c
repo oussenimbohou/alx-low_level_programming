@@ -1,5 +1,5 @@
-#include "calc.h"
-
+#include "3-calc.h"
+#include <stdio.h>
 /**
   *op_add - function to add 2 integers.
   *@a: integer argument as first operand
